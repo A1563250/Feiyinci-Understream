@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>映画馆藏 · 溺川夜雨</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="gallery" data-zone="soft">
+<div class="stage">
+<div class="page">
+
+  <div class="page-head">
+    <div class="crumb">映画馆藏 · COLLECTED LIGHTS</div>
+    <h1>映画馆藏</h1>
+    <div class="sub">被雨水保存的光，仍在玻璃之后闪烁。</div>
+  </div>
+
+  <p class="prose">溺川没有完全干燥的档案室。所有被带回的影像都会经过雨水、霓虹与夜雾的处理：边缘变得柔软，颜色沉入深蓝，某些原本清晰的名字会在纸背消散，只剩情绪仍准确地停留在画面里。馆藏按照光被发现的地点分为五个区域。你可以横向穿过它们，也可以停在任意一张映像前，查看它被拾起时的年份、形态与简短注释。这里没有必须完成的路线。雨会替你保留方向。</p>
+
+  <div class="filters">
+    <button class="chip cur" data-f="all">全部映像</button>
+    <button class="chip" data-f="rain_port">雨港霓虹</button>
+    <button class="chip" data-f="lost_roles">佚梦角色</button>
+    <button class="chip" data-f="water_poem">水底诗章</button>
+    <button class="chip" data-f="mist_light">雾中灯影</button>
+    <button class="chip" data-f="old_slices">旧日切片</button>
+  </div>
+
+  <div class="theme-note" id="themeNote">
+    <div class="tn-head"><h2>全部映像</h2></div>
+    <p>被雨水保存的光，仍在玻璃之后闪烁。你可以横向穿过五个区域，也可以停在任意一张映像前。</p>
+  </div>
+
+  <div class="track-wrap">
+    <div class="track" id="track"></div>
+    <div class="track-ctl">
+      <button class="arrow" id="prevBtn" aria-label="向左">←</button>
+      <div class="dots" id="dots"></div>
+      <button class="arrow" id="nextBtn" aria-label="向右">→</button>
+    </div>
+    <div class="track-tip">拖动或使用方向键，可沿馆藏横向移动</div>
+  </div>
+
+</div>
+</div>
+<script src="assets/data/site-data.js"></script>
+<script src="assets/js/bond.js"></script>
+<script src="assets/js/weather.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

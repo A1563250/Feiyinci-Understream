@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>心轨刻度 · 溺川夜雨</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="bond" data-zone="full">
+<div class="stage">
+<div class="page">
+
+  <div class="page-head">
+    <div class="crumb">心轨刻度 · BOND TRACK</div>
+    <h1>心轨刻度</h1>
+    <div class="sub">雨痕只记录路径，不索取身份。</div>
+  </div>
+
+  <p class="prose">当你在馆藏中停留、阅读档案、接通频段或触碰雨后坐标，页面会在心轨上留下轻微刻度。它不是任务，也不用于强迫你反复点击；同一种行为在同一天通常只会被记录一次。这些数据保存在你的浏览器本地。网站不会为它建立账号，也不会将轨迹上传到服务器。核心作品永远开放，心轨只解锁少量消息、纪念卡、隐藏频段与最终回声。</p>
+
+  <div class="bond-top">
+    <div class="bond-now panel">
+      <div class="lv-tag"><span class="lvno" id="bondLvNo">Lv.1</span><small style="color:var(--txt-faint)">当前身份</small></div>
+      <h2 id="bondName">溺途访者</h2>
+      <p class="fb" id="bondFb">你刚从雨幕外侧抵达。</p>
+      <div class="bond-bar">
+        <div class="track"><i id="bondFill" style="width:0%"></i></div>
+        <div class="nums" id="bondNums"></div>
+      </div>
+    </div>
+    <div class="bond-side panel">
+      <h3>刻度如何形成</h3>
+      <ol id="ruleList"></ol>
+    </div>
+  </div>
+
+  <div class="sec-title"><h2>心轨等级</h2><small>LEVELS</small></div>
+  <div class="lvl-grid" id="lvlGrid"></div>
+
+  <div class="sec-title"><h2>纪念映像卡</h2><small>LV.4 MEMORIAL</small></div>
+  <div class="memorial panel" id="memorial">
+    <div class="mcard-art"></div>
+    <h3>椿色印记</h3>
+    <p id="memState">需要达到 Lv.4 · 遗渡溺川之椿，印记才会显影。</p>
+  </div>
+
+  <div class="final-echo panel locked" id="finalEcho"></div>
+
+  <div class="clear-zone">
+    <span>清除后，等级、解锁消息与本地回访记录将回到初始状态；核心作品不会受到影响。</span>
+    <button class="btn sm danger" id="clearBtn">清除本地雨痕</button>
+  </div>
+
+</div>
+</div>
+<script src="assets/data/site-data.js"></script>
+<script src="assets/js/bond.js"></script>
+<script src="assets/js/weather.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
