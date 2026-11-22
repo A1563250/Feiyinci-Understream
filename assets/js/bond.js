@@ -8,8 +8,10 @@
   "use strict";
 
   const LS_KEY = "fn_bond";
-  const LEVELS = window.SITE_DATA ? SITE_DATA.bond.levels : [];
-  const RULES  = window.SITE_DATA ? SITE_DATA.bond.rules  : [];
+  const LEVELS = (window.SITE_DATA && SITE_DATA.bond && SITE_DATA.bond.levels) ? SITE_DATA.bond.levels : [];
+  const RULES  = (window.SITE_DATA && SITE_DATA.bond && SITE_DATA.bond.rules)  ? SITE_DATA.bond.rules  : [];
+  const FALLBACK_LEVEL = { lv: 1, name: "溺途访者", min: 0,
+    feedback: "你刚从雨幕外侧抵达。", unlock: "雨夜问候" };
 
   const today = () => new Date().toISOString().slice(0, 10);
 
@@ -45,7 +47,6 @@
   }
 
   const listeners = [];
-
   /* ---------- 事件入口 ----------
      award('first_visit')
      award('theme_first', 'rain_port')
@@ -116,10 +117,12 @@
 
   function get() { return load(); }
   function getLevel() {
+    if (!LEVELS.length) return FALLBACK_LEVEL;
     const st = load();
-    return LEVELS.find(L => L.lv === st.level) || LEVELS[0];
+    return LEVELS.find(L => L.lv === st.level) || LEVELS[0] || FALLBACK_LEVEL;
   }
   function nextLevel() {
+    if (!LEVELS.length) return null;
     const st = load();
     return LEVELS.find(L => L.lv === st.level + 1) || null;
   }

@@ -578,6 +578,21 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     buildLoader();
+
+    // 数据文件缺失时的友好降级（避免白屏崩溃）
+    if (!window.SITE_DATA) {
+      console.error("[溺川夜雨] assets/data/site-data.js 未能加载，请检查文件是否已上传。");
+      const lb = $("#loader");
+      if (lb) {
+        lb.classList.add("off");
+        const st = document.createElement("div");
+        st.style.cssText = "position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:300;background:#04080f;color:#8fa0bd;font-size:14px;line-height:2;text-align:center;padding:24px;";
+        st.innerHTML = "溺川的雨幕太浓，数据文件没能抵达。<br>请检查 assets/data/site-data.js 是否已正确上传，然后刷新页面。";
+        document.body.appendChild(st);
+      }
+      return;
+    }
+
     buildShell();
     buildCorner();
     bindLevelFx();
