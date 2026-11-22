@@ -29,8 +29,8 @@ const SITE_DATA = {
 
   /* ---------- 视觉资源路径（生成后替换） ---------- */
   assets: {
-    heroBg: "",                // 首屏雨夜港都背景图，例：assets/images/hero_bg.jpg
-    portrait: ""               // 首屏人物照片，例：assets/images/portrait.jpg
+    heroBg: "assets/images/hero_bg.jpg",   // 首屏雨夜港都背景（DEMO，生成稿）
+    portrait: ""                           // 首屏人物照片，例：assets/images/portrait.jpg
   },
 
   /* ---------- 五个灵感主题 ---------- */
@@ -60,35 +60,35 @@ const SITE_DATA = {
   works: [
     { id: "work_demo_rain_port",  theme: "rain_port",  isDemo: true,
       title: "雨港霓虹 · 临时映像", year: "", medium: "", tools: "", note: "",
-      image: "", tags: ["临时映像", "DEMO"] },
+      image: "assets/images/demo_rain_port.jpg", tags: ["临时映像", "DEMO"] },
     { id: "work_lost_rain_port",  theme: "rain_port",  isDemo: false,
       title: "遗失的光", year: "", medium: "", tools: "", note: "",
       image: "", tags: ["待补"] },
 
     { id: "work_demo_lost_roles", theme: "lost_roles", isDemo: true,
       title: "佚梦之影 · 临时映像", year: "", medium: "", tools: "", note: "",
-      image: "", tags: ["临时映像", "DEMO"] },
+      image: "assets/images/demo_lost_roles.jpg", tags: ["临时映像", "DEMO"] },
     { id: "work_lost_lost_roles", theme: "lost_roles", isDemo: false,
       title: "遗失的光", year: "", medium: "", tools: "", note: "",
       image: "", tags: ["待补"] },
 
     { id: "work_demo_water_poem", theme: "water_poem", isDemo: true,
       title: "水底诗章 · 临时映像", year: "", medium: "", tools: "", note: "",
-      image: "", tags: ["临时映像", "DEMO"] },
+      image: "assets/images/demo_water_poem.jpg", tags: ["临时映像", "DEMO"] },
     { id: "work_lost_water_poem", theme: "water_poem", isDemo: false,
       title: "遗失的光", year: "", medium: "", tools: "", note: "",
       image: "", tags: ["待补"] },
 
     { id: "work_demo_mist_light", theme: "mist_light", isDemo: true,
       title: "雾中灯影 · 临时映像", year: "", medium: "", tools: "", note: "",
-      image: "", tags: ["临时映像", "DEMO"] },
+      image: "assets/images/demo_mist_light.jpg", tags: ["临时映像", "DEMO"] },
     { id: "work_lost_mist_light", theme: "mist_light", isDemo: false,
       title: "遗失的光", year: "", medium: "", tools: "", note: "",
       image: "", tags: ["待补"] },
 
     { id: "work_demo_old_slices", theme: "old_slices", isDemo: true,
       title: "旧日切片 · 临时映像", year: "", medium: "", tools: "", note: "",
-      image: "", tags: ["临时映像", "DEMO"] },
+      image: "assets/images/demo_old_slices.jpg", tags: ["临时映像", "DEMO"] },
     { id: "work_lost_old_slices", theme: "old_slices", isDemo: false,
       title: "遗失的光", year: "", medium: "", tools: "", note: "",
       image: "", tags: ["待补"] }
